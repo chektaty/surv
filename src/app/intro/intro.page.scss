@@ -1,0 +1,37 @@
+ion-content{
+    --ion-background-color: var(--ion-color-white);
+  }
+  .logo-header {
+    height: 40px;
+    margin-top: 5px;
+  }
+  .img-intro {
+    margin-bottom: -7px;
+  }
+  .box-title {
+    color: black;
+    margin: 10px 0px 5px 5px;
+    font-weight: 500;
+  }
+  .scroll-box {
+    display: flex;
+    overflow: scroll;
+  }
+  .movie {
+    margin-left: 5px;
+    
+  }
+  .movie img {
+    height: 150px;
+    max-width: none;
+  }
+  .box-c{
+    margin: 0;
+    padding: 0;
+  }
+  .questionText {
+    max-height: 1.4em;
+    line-height: 1.8em;
+   
+    white-space: normal;
+    }

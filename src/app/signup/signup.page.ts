@@ -9,11 +9,11 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { ActionSheetController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-signup',
+  templateUrl: './signup.page.html',
+  styleUrls: ['./signup.page.scss'],
 })
-export class HomePage implements OnInit{
+export class SignupPage implements OnInit {
 
   constructor(private nativeStorage: NativeStorage,public formBuilder: FormBuilder,public apiService: ServieApiServiceService,
     private alertService: AlertServiceService,private navCtrl: NavController)  {}
@@ -78,3 +78,5 @@ export class HomePage implements OnInit{
 
 
 }
+
+

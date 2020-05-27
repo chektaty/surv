@@ -1,0 +1,37 @@
+
+
+<ion-content class="background" >
+    <div class="padd">
+        <div class="logo">
+            <ion-icon color="light" name="create-outline"></ion-icon>
+        </div>
+  
+        <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input inputmode="email"  formControlName="email"></ion-input>
+            </ion-item>
+            <div *ngFor="let error of errorMessages.email">
+              <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+                <small class="error-message">{{error.message}}</small>
+              </ng-container>
+            </div>
+            <ion-item>
+                <ion-label position="floating">password</ion-label>
+                <ion-input  type="password"inputmode="password" formControlName="password"></ion-input>
+            </ion-item>
+              <div *ngFor="let error of errorMessages.password">
+                <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+                  <small class="error-message">{{error.message}}</small>
+                </ng-container>
+              </div>
+          <ion-item lines="none"> 
+          </ion-item>
+          <ion-button color="light" fill="outline" [disabled]="!registrationForm.valid" shape="round"  type="submit" expand="block">
+              Valider <ion-icon slot="end"> </ion-icon>
+          </ion-button>
+        </form>
+  </div>  
+            
+      </ion-content>
+
